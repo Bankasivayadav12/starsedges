@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import Logo from "./Logo";
 
 export default function Sections() {
@@ -195,7 +196,7 @@ export default function Sections() {
             © 2026 STARS EDGES Inc. All rights reserved. Sovereign VLEO Architecture.
           </p>
           <div className="flex space-x-6 text-xs text-neutral-400 uppercase tracking-widest">
-            <a href="#home" className="hover:text-white transition-colors">Privacy</a>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <a href="#home" className="hover:text-white transition-colors">Terms</a>
             <a href="#home" className="hover:text-white transition-colors">Compliance</a>
           </div>

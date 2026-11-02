@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export default function FaqPage() {
@@ -103,9 +104,7 @@ export default function FaqPage() {
         </div>
       </main>
 
-      <footer className="border-t border-neutral-900 py-10 px-6 bg-black text-center text-xs text-neutral-500 tracking-wider uppercase">
-        © 2026 STARS EDGES Inc. Sovereign VLEO Satellites. All rights reserved.
-      </footer>
+      <Footer />
     </div>
   );
 }

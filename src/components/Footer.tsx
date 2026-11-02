@@ -38,6 +38,11 @@ export default function Footer() {
         <p className="text-neutral-400 text-xs sm:text-sm max-w-2xl leading-relaxed">
           Setsquared Surrey (Unit 58) Surrey Technology Centre, Surrey Research Park, Guildford, Surrey, United Kingdom, GU2 7YG
         </p>
+
+        {/* Copyright */}
+        <p className="text-neutral-500 text-xs tracking-wider">
+          © 2026 Stars Edges Ltd. All rights reserved.
+        </p>
       </div>
     </footer>
   );
