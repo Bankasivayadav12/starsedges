@@ -9,11 +9,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "STARS EDGE | Redefining Space Mobility at the Edge",
+  title: "STARS EDGES | Redefining Space Mobility at the Edge",
   description:
     "Affordable, sovereign satellites in Very Low Earth Orbit owned outright, launched from almost anywhere, and operated by you!",
   keywords: [
-    "STARS EDGE",
+    "STARS EDGES",
     "space mobility",
     "VLEO",
     "Very Low Earth Orbit",

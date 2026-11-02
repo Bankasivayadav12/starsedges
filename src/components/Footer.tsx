@@ -19,7 +19,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center hover:opacity-85 transition-opacity"
-          aria-label="STARS EDGE LinkedIn"
+          aria-label="STARS EDGES LinkedIn"
         >
           <svg
             className="w-4 h-4 fill-current"
@@ -31,7 +31,7 @@ export default function Footer() {
 
         {/* Company Name */}
         <div className="text-white text-base sm:text-lg font-bold tracking-tight">
-          Stars Edge Ltd
+          Stars Edges Ltd
         </div>
 
         {/* Address */}

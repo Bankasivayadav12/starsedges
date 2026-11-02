@@ -111,9 +111,9 @@ export default function TechnologyPage() {
 
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-10">
                   <div className="flex items-center space-x-2">
-                    <span className="text-xs font-bold bg-white/20 backdrop-blur px-2 py-0.5 rounded">STARS EDGE</span>
+                    <span className="text-xs font-bold bg-white/20 backdrop-blur px-2 py-0.5 rounded">STARS EDGES</span>
                     <span className="text-xs sm:text-sm font-semibold truncate drop-shadow">
-                      Stars Edge: Where do we fly?
+                      Stars Edges: Where do we fly?
                     </span>
                   </div>
                 </div>
@@ -191,7 +191,7 @@ export default function TechnologyPage() {
               <div className="relative w-full h-[280px] sm:h-[340px] rounded-xl overflow-hidden shadow-xl border border-neutral-800">
                 <Image
                   src="/team-office.jpg"
-                  alt="Stars Edge engineers collaborating in office"
+                  alt="Stars Edges engineers collaborating in office"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover object-center"

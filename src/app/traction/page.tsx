@@ -27,7 +27,7 @@ export default function TractionPage() {
       title: "ESA Clean Space Days 2026",
       image: "/cleanroom-satellite.jpg",
       content:
-        "STARS EDGE presented our zero-debris VLEO aerodynamic orbital decay architecture at ESA Clean Space Days. Operating at 100–150 km guarantees that all decommissioned spacecraft re-enter and disintegrate cleanly without contributing to the orbital space debris tracking catalogue.",
+        "STARS EDGES presented our zero-debris VLEO aerodynamic orbital decay architecture at ESA Clean Space Days. Operating at 100–150 km guarantees that all decommissioned spacecraft re-enter and disintegrate cleanly without contributing to the orbital space debris tracking catalogue.",
     },
     {
       date: "15 July 2026",
@@ -43,7 +43,7 @@ export default function TractionPage() {
       title: "Meetings in UK Parliament with ACT for SME",
       image: "/team-office.jpg",
       content:
-        "Leadership from STARS EDGE engaged with UK parliamentarians and aerospace trade delegates on securing sovereign satellite supply chains, domestic launch manifests, and critical telecom infrastructure resilience.",
+        "Leadership from STARS EDGES engaged with UK parliamentarians and aerospace trade delegates on securing sovereign satellite supply chains, domestic launch manifests, and critical telecom infrastructure resilience.",
     },
     {
       date: "15 July 2026",
@@ -75,7 +75,7 @@ export default function TractionPage() {
       title: "Surrey Research Park Innovation Award 2026",
       image: "/team-office.jpg",
       content:
-        "STARS EDGE was honored with the Innovation of the Year Award at Surrey Research Park for groundbreaking engineering in sustainable, self-refuelling orbital propulsion.",
+        "STARS EDGES was honored with the Innovation of the Year Award at Surrey Research Park for groundbreaking engineering in sustainable, self-refuelling orbital propulsion.",
     },
     {
       date: "28 June 2026",
@@ -115,7 +115,7 @@ export default function TractionPage() {
       title: "Barclays Eagle Labs Deep Tech Showcase Winner",
       image: "/team-contact.jpg",
       content:
-        "STARS EDGE was chosen as the flagship venture in the Barclays Eagle Labs Aerospace cohort, accelerating sovereign industrial scaling for UK advanced manufacturing.",
+        "STARS EDGES was chosen as the flagship venture in the Barclays Eagle Labs Aerospace cohort, accelerating sovereign industrial scaling for UK advanced manufacturing.",
     },
     {
       date: "28 May 2026",
@@ -139,7 +139,7 @@ export default function TractionPage() {
       title: "Farnborough International Airshow Delegation",
       image: "/team-booth.jpg",
       content:
-        "STARS EDGE announced our official exhibit presence at Farnborough International Airshow Space Zone, displaying 1:1 scale flight bus demonstrators and AERIS engine hardware.",
+        "STARS EDGES announced our official exhibit presence at Farnborough International Airshow Space Zone, displaying 1:1 scale flight bus demonstrators and AERIS engine hardware.",
     },
     {
       date: "08 May 2026",
@@ -176,7 +176,7 @@ export default function TractionPage() {
     {
       date: "10 April 2026",
       category: "Team",
-      title: "STARS EDGE Welcomes New Aerospace Engineering Cohort",
+      title: "STARS EDGES Welcomes New Aerospace Engineering Cohort",
       image: "/team-office.jpg",
       content:
         "Welcomed seven new specialists in plasma dynamics, flight guidance software, and RF payload integration to our growing engineering campus at Surrey Research Park.",
@@ -186,7 +186,7 @@ export default function TractionPage() {
   const galleryItems = [
     {
       src: "/team-booth.jpg",
-      caption: "STARS EDGE stand unveiling the AirSAT satellite bus, prototype models, and AERIS engine.",
+      caption: "STARS EDGES stand unveiling the AirSAT satellite bus, prototype models, and AERIS engine.",
     },
     {
       src: "/cleanroom-satellite.jpg",
@@ -565,20 +565,22 @@ export default function TractionPage() {
 
             <div className="relative flex items-center">
               <button
-                onClick={prevGallery}
-                aria-label="Previous thumbnail"
-                className="hidden sm:flex z-10 w-8 h-8 rounded-full bg-neutral-900/90 border border-neutral-700 text-white items-center justify-center hover:bg-neutral-800 mr-2 flex-shrink-0 cursor-pointer"
+                onClick={() => scrollThumbs("left")}
+                aria-label="Scroll thumbnails left"
+                className="z-10 w-9 h-9 rounded-full bg-neutral-900 border border-neutral-700/80 text-white flex items-center justify-center hover:bg-neutral-800 transition-colors mr-3 flex-shrink-0 cursor-pointer shadow-lg text-lg select-none"
               >
                 ‹
               </button>
 
               <div
                 id="gallery-thumbs-track"
-                className="flex items-center gap-2.5 overflow-x-auto pb-3 pt-1 scrollbar-thin w-full scroll-smooth"
+                className="flex items-center gap-2.5 overflow-x-auto py-2 no-scrollbar [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden w-full scroll-smooth select-none"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               >
                 {galleryItems.map((item, idx) => (
                   <button
                     key={idx}
+                    id={`thumb-btn-${idx}`}
                     onClick={() => setGalleryIndex(idx)}
                     aria-label={`View photo ${idx + 1}`}
                     className={`relative w-20 h-14 sm:w-24 sm:h-16 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all cursor-pointer ${
@@ -599,9 +601,9 @@ export default function TractionPage() {
               </div>
 
               <button
-                onClick={nextGallery}
-                aria-label="Next thumbnail"
-                className="hidden sm:flex z-10 w-8 h-8 rounded-full bg-neutral-900/90 border border-neutral-700 text-white items-center justify-center hover:bg-neutral-800 ml-2 flex-shrink-0 cursor-pointer"
+                onClick={() => scrollThumbs("right")}
+                aria-label="Scroll thumbnails right"
+                className="z-10 w-9 h-9 rounded-full bg-neutral-900 border border-neutral-700/80 text-white flex items-center justify-center hover:bg-neutral-800 transition-colors ml-3 flex-shrink-0 cursor-pointer shadow-lg text-lg select-none"
               >
                 ›
               </button>

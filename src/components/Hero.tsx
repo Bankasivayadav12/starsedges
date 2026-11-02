@@ -114,7 +114,7 @@ export default function Hero() {
               Get in Touch
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">
-              Connect With STARS EDGE
+              Connect With STARS EDGES
             </h3>
             <p className="text-neutral-300 text-sm mb-6">
               Inquire about dedicated satellite constellations, payload slots, or launch mission schedules.

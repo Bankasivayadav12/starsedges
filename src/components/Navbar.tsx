@@ -56,7 +56,7 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Center STARS EDGE Logo */}
+          {/* Center STARS EDGES Logo */}
           <div className="flex-shrink-0 flex items-center justify-center px-4">
             <Logo />
           </div>

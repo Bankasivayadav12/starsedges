@@ -50,7 +50,7 @@ export default function HomeSections() {
               STARS
             </div>
             <div className="flex items-center text-2xl sm:text-3xl font-extrabold tracking-[0.1em] text-white leading-none mt-1">
-              <span>EDGE</span>
+              <span>EDGES</span>
               <div className="flex items-center ml-1">
                 <span className="text-sm font-bold tracking-tighter text-white">
                   ✦=
@@ -63,20 +63,20 @@ export default function HomeSections() {
         </div>
       </section>
 
-      {/* WHY STARS EDGE (Image 2) */}
+      {/* WHY STARS EDGES (Image 2) */}
       <section className="py-20 sm:py-24 px-6 sm:px-10 max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-[#2563EB] text-center mb-16 tracking-tight">
-          Why STARS EDGE
+          Why STARS EDGES
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-          {/* Column 1: Welcome to Stars Edge */}
+          {/* Column 1: Welcome to Stars Edges */}
           <div className="space-y-6 text-[#A1A1AA] text-sm sm:text-base leading-relaxed">
             <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-              Welcome to Stars Edge
+              Welcome to Stars Edges
             </h3>
             <p>
-              Stars Edge is on a mission to make space affordable, sovereign and
+              Stars Edges is on a mission to make space affordable, sovereign and
               genuinely usable. We build the next generation of satellites for
               Very Low Earth Orbit (VLEO), flying at just 100–150 km, the lowest
               sustained orbit there is.
@@ -112,7 +112,7 @@ export default function HomeSections() {
             <p>
               Very Low Earth Orbit (VLEO) is the band of space below roughly
               450 km ...well beneath the 500–1,500 km where today&apos;s
-              constellations fly. Stars Edge operates at the extreme low end of
+              constellations fly. Stars Edges operates at the extreme low end of
               it, 100–150 km, closer to Earth than any sustained satellite
               before it.
             </p>
@@ -265,10 +265,10 @@ export default function HomeSections() {
               <div>
                 <span className="text-neutral-400">Email: </span>
                 <a
-                  href="mailto:Contact@starsedge.space"
+                  href="mailto:Contact@starsedges.space"
                   className="text-[#2563EB] hover:underline"
                 >
-                  Contact@starsedge.space
+                  Contact@starsedges.space
                 </a>
               </div>
               <div>
@@ -283,7 +283,7 @@ export default function HomeSections() {
                 </a>
               </div>
               <p className="pt-2 text-neutral-400 leading-relaxed text-sm">
-                Stars Edge Ltd — Surrey Technology Centre, Surrey Research Park, Guildford, Surrey, GU2 7YG, United Kingdom
+                Stars Edges Ltd — Surrey Technology Centre, Surrey Research Park, Guildford, Surrey, GU2 7YG, United Kingdom
               </p>
             </div>
 
@@ -301,7 +301,7 @@ export default function HomeSections() {
           <div className="relative w-full h-[320px] sm:h-[400px] rounded-xl overflow-hidden shadow-2xl border border-neutral-800">
             <Image
               src="/team-contact.jpg"
-              alt="Stars Edge Engineering Team at Surrey Technology Centre"
+              alt="Stars Edges Engineering Team at Surrey Technology Centre"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-center"
@@ -332,7 +332,7 @@ export default function HomeSections() {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Thank you! Your note has been sent to Contact@starsedge.space.");
+                alert("Thank you! Your note has been sent to Contact@starsedges.space.");
                 setShowContactModal(false);
               }}
               className="space-y-4"

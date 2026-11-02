@@ -13,7 +13,7 @@ export default function Sections() {
     },
     {
       q: "How does sovereign ownership work?",
-      a: "Unlike shared megaconstellation services, STARS EDGE delivers dedicated satellites owned outright by your enterprise or nation, ensuring total data sovereignty, custom encryption, and dedicated orbital passes.",
+      a: "Unlike shared megaconstellation services, STARS EDGES delivers dedicated satellites owned outright by your enterprise or nation, ensuring total data sovereignty, custom encryption, and dedicated orbital passes.",
     },
     {
       q: "What launch capabilities are supported?",
@@ -192,7 +192,7 @@ export default function Sections() {
             <Logo />
           </div>
           <p className="text-xs text-neutral-500 tracking-wider uppercase text-center">
-            © 2026 STARS EDGE Inc. All rights reserved. Sovereign VLEO Architecture.
+            © 2026 STARS EDGES Inc. All rights reserved. Sovereign VLEO Architecture.
           </p>
           <div className="flex space-x-6 text-xs text-neutral-400 uppercase tracking-widest">
             <a href="#home" className="hover:text-white transition-colors">Privacy</a>

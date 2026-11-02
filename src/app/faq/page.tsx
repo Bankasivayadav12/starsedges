@@ -104,7 +104,7 @@ export default function FaqPage() {
       </main>
 
       <footer className="border-t border-neutral-900 py-10 px-6 bg-black text-center text-xs text-neutral-500 tracking-wider uppercase">
-        © 2026 STARS EDGE Inc. Sovereign VLEO Satellites. All rights reserved.
+        © 2026 STARS EDGES Inc. Sovereign VLEO Satellites. All rights reserved.
       </footer>
     </div>
   );

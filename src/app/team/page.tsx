@@ -9,50 +9,45 @@ import PartnerLogos from "@/components/PartnerLogos";
 export default function TeamPage() {
   const leadership = [
     {
-      name: "Sara Alao",
-      role: "CEO",
-      image: "/team-sara.jpg",
+      name: "Nivadhitha Roy",
+      role: "CEO of Asia",
+      image: "/member-sara.jpg",
     },
     {
-      name: "Andrew Witts",
-      role: "CTO",
-      image: "/team-andrew.jpg",
+      name: "Rama Swammy Naidu",
+      role: "India Head",
+      image: "/member-triyan.jpg",
     },
     {
-      name: "Brendan Huysamen",
-      role: "COO",
-      image: "/team-brendan.jpg",
-    },
-  ];
-
-  const engineering = [
-    {
-      name: "Triyan Pal Arora",
-      role: "Engineering Lead",
-      image: "/team-triyan.jpg",
-    },
-    {
-      name: "Samantha Stewart",
-      role: "Commercial Officer",
-      image: "/team-samantha.jpg",
-    },
-    {
-      name: "Mohammad Ismail",
-      role: "Propulsion Engineer",
-      image: "/team-mohammad.jpg",
+      name: "Trivadhi",
+      role: "South Head",
+      image: "/member-andrew.jpg",
     },
   ];
 
-  const specialists = [
+  const metallurgists = [
     {
-      name: "Arturo Vara Herrara",
-      role: "Spacecraft Materials & Processes Engineer",
-      image: "/team-arturo.jpg",
+      name: "Harshini Krishna",
+      role: "Metallurgist",
+      image: "/member-samantha.jpg",
     },
     {
-      name: "Esme Griffiths-Nowicki",
-      role: "Propulsion Intern",
-      image: "/team-esme.jpg",
+      name: "Monies Sivaraj",
+      role: "Metallurgist",
+      image: "/member-monies.jpg",
+    },
+  ];
+
+  const coordinators = [
+    {
+      name: "Legal Ackivas",
+      role: "Legal Coordinator",
+      image: "/member-ackivas.jpg",
+    },
+    {
+      name: "V.S.N. Roa",
+      role: "Coordinator",
+      image: "/member-mohammad.jpg",
     },
   ];
 
@@ -71,7 +66,7 @@ export default function TeamPage() {
           <div className="relative w-full h-[340px] sm:h-[480px] md:h-[580px] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-neutral-800">
             <Image
               src="/team-booth.jpg"
-              alt="Stars Edge team showcasing satellite at exhibition booth"
+              alt="Stars Edges team showcasing satellite at exhibition booth"
               fill
               priority
               sizes="100vw"
@@ -85,7 +80,7 @@ export default function TeamPage() {
               Our Vision
             </h2>
             <p className="text-[#A1A1AA] text-sm sm:text-base leading-relaxed">
-              Our vision at Stars Edge is to be the leading provider of innovative solutions in the science and technology industry. We strive to create a better future through our work and to make a positive impact on society.
+              Our vision at Stars Edges is to be the leading provider of innovative solutions in the science and technology industry. We strive to create a better future through our work and to make a positive impact on society.
             </p>
           </div>
         </section>
@@ -97,7 +92,7 @@ export default function TeamPage() {
           </h2>
 
           <div className="space-y-12 sm:space-y-16">
-            {/* Row 1: Executive Leadership (3) */}
+            {/* Row 1: Leadership (3) */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8 justify-items-center">
               {leadership.map((person, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center group">
@@ -113,39 +108,16 @@ export default function TeamPage() {
                   <h3 className="text-lg sm:text-xl font-bold text-white mt-5">
                     {person.name}
                   </h3>
-                  <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mt-1">
+                  <p className="text-xs sm:text-sm text-[#A1A1AA] mt-1">
                     {person.role}
                   </p>
                 </div>
               ))}
             </div>
 
-            {/* Row 2: Leads & Engineers (3) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8 justify-items-center">
-              {engineering.map((person, idx) => (
-                <div key={idx} className="flex flex-col items-center text-center group">
-                  <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-neutral-800 shadow-xl group-hover:border-[#2563EB] transition-colors">
-                    <Image
-                      src={person.image}
-                      alt={person.name}
-                      fill
-                      sizes="(max-width: 640px) 150px, 200px"
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-white mt-5">
-                    {person.name}
-                  </h3>
-                  <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mt-1">
-                    {person.role}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Row 3: Specialists & Interns (2) */}
+            {/* Row 2: Metallurgy & Materials (2) */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-20">
-              {specialists.map((person, idx) => (
+              {metallurgists.map((person, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center group max-w-xs">
                   <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-neutral-800 shadow-xl group-hover:border-[#2563EB] transition-colors">
                     <Image
@@ -159,7 +131,30 @@ export default function TeamPage() {
                   <h3 className="text-lg sm:text-xl font-bold text-white mt-5">
                     {person.name}
                   </h3>
-                  <p className="text-xs font-semibold text-[#A1A1AA] uppercase tracking-wider mt-1 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#A1A1AA] mt-1 leading-relaxed">
+                    {person.role}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Row 3: Coordinators (2) */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-20">
+              {coordinators.map((person, idx) => (
+                <div key={idx} className="flex flex-col items-center text-center group max-w-xs">
+                  <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-neutral-800 shadow-xl group-hover:border-[#2563EB] transition-colors">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      sizes="(max-width: 640px) 150px, 200px"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-white mt-5">
+                    {person.name}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#A1A1AA] mt-1 leading-relaxed">
                     {person.role}
                   </p>
                 </div>
@@ -169,7 +164,7 @@ export default function TeamPage() {
         </section>
 
         {/* THE TEAM HAS WORKED WITH */}
-        <section className="px-6 sm:px-10 max-w-5xl mx-auto mb-20 border-t border-neutral-900 pt-20 sm:pt-24">
+        <section className="px-4 sm:px-8 max-w-6xl mx-auto mb-20 border-t border-neutral-900 pt-20 sm:pt-24">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-[#2563EB] text-center mb-14 tracking-tight">
             The team has worked with
           </h2>
