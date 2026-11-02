@@ -1,29 +1,83 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+
+const heroSlides = [
+  {
+    src: "/hero-bg.jpg",
+    alt: "Earth in Very Low Earth Orbit at the edge of space",
+  },
+  {
+    src: "/airsat-orbit.jpg",
+    alt: "AirSAT satellite orbiting above Earth in VLEO",
+  },
+  {
+    src: "/airsat-tech-hero.jpg",
+    alt: "STARS EDGES satellite constellation architecture",
+  },
+  {
+    src: "/cleanroom-satellite.jpg",
+    alt: "Cleanroom satellite manufacturing and integration",
+  },
+  {
+    src: "/aeris-module.jpg",
+    alt: "AERIS air-breathing electric propulsion thruster module",
+  },
+  {
+    src: "/airsat-model.jpg",
+    alt: "AirSAT structural satellite model",
+  },
+];
+
+const AUTO_PLAY_INTERVAL = 5000;
 
 export default function Hero() {
   const [showContactModal, setShowContactModal] = useState(false);
   const [showTechModal, setShowTechModal] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Pure automatic carousel rotation
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, AUTO_PLAY_INTERVAL);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section id="home" className="w-full bg-black px-3 sm:px-6 md:px-8 pb-10 select-none">
       {/* Hero Card Container with rounded corners matching the screenshot */}
       <div className="relative min-h-[85vh] sm:min-h-[88vh] w-full rounded-2xl md:rounded-3xl overflow-hidden flex items-center justify-center border border-neutral-800/40 shadow-2xl">
-        {/* Background Orbital Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/hero-bg.jpg"
-            alt="Earth in Very Low Earth Orbit at the edge of space"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center transform scale-[1.01]"
-          />
-          {/* Subtle cinematic vignette */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/50" />
-          <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/25 to-black/75 pointer-events-none" />
+        {/* Background Orbital Auto Carousel */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {heroSlides.map((slide, index) => {
+            const isActive = index === currentSlide;
+            return (
+              <div
+                key={slide.src}
+                className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                  isActive ? "opacity-100 z-0" : "opacity-0 -z-10 pointer-events-none"
+                }`}
+              >
+                <Image
+                  src={slide.src}
+                  alt={slide.alt}
+                  fill
+                  priority={index === 0 || index === 1}
+                  sizes="100vw"
+                  className={`object-cover object-center transform transition-transform duration-[5000ms] ease-out ${
+                    isActive ? "scale-105" : "scale-100"
+                  }`}
+                />
+              </div>
+            );
+          })}
+
+          {/* Cinematic Vignette Overlays for deep contrast and text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/60 pointer-events-none z-10" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.85)_100%)] pointer-events-none z-10" />
         </div>
 
         {/* Hero Content */}
