@@ -265,10 +265,10 @@ export default function HomeSections() {
               <div>
                 <span className="text-neutral-400">Email: </span>
                 <a
-                  href="mailto:Contact@starsedges.space"
+                  href="mailto:info@starsedges.com"
                   className="text-[#2563EB] hover:underline"
                 >
-                  Contact@starsedges.space
+                  info@starsedges.com
                 </a>
               </div>
               <div>
