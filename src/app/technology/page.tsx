@@ -1,15 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// YouTube Video ID for the orbital simulation video (4K Ultra-HD Earth orbit)
-// Can be replaced with any preferred video ID or updated anytime
-const VLEO_YOUTUBE_ID = "oFDeNcu3mnc";
+// Orbital flight videos for the VLEO simulation
+// nod7rUzIX8w: Official ESA continuous orbital pass timelapse (Verified embeddable worldwide & auto-plays)
+const VLEO_VIDEOS = [
+  {
+    id: "nod7rUzIX8w",
+    label: "ESA VLEO Orbital Timelapse",
+    badge: "Active Simulation",
+  },
+  {
+    id: "ROboUHfPUrU",
+    label: "NASA Earth View Stream",
+    badge: "Live View",
+  },
+];
 
 export default function TechnologyPage() {
+  const [activeVideoId, setActiveVideoId] = useState(VLEO_VIDEOS[0].id);
 
   const airSatBulletPoints = [
     "Compatible with Earth observation, telecoms, remote sensing and data payloads",
