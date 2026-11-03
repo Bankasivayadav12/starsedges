@@ -1,12 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+// YouTube Video ID for the orbital simulation video (4K Ultra-HD Earth orbit)
+// Can be replaced with any preferred video ID or updated anytime
+const VLEO_YOUTUBE_ID = "oFDeNcu3mnc";
+
 export default function TechnologyPage() {
-  const [playingVideo, setPlayingVideo] = useState(false);
 
   const airSatBulletPoints = [
     "Compatible with Earth observation, telecoms, remote sensing and data payloads",
@@ -76,62 +79,24 @@ export default function TechnologyPage() {
             Where do we fly?
           </h2>
 
-          <div className="relative w-full max-w-3xl mx-auto aspect-video rounded-xl overflow-hidden shadow-2xl border border-neutral-800 bg-[#0c1220]">
-            {playingVideo ? (
-              <div className="w-full h-full flex flex-col items-center justify-center bg-black p-6 text-center animate-fadeIn">
-                <div className="text-[#2563EB] text-sm font-bold uppercase tracking-wider mb-2">
-                  Orbital Trajectory Simulation
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  VLEO Corridor: 100 km – 150 km
-                </h3>
-                <p className="text-neutral-400 text-sm max-w-lg mb-6">
-                  AirSAT completes one full Earth orbit every 87 minutes, experiencing ambient atmospheric particle intake for continuous drag-neutral flight.
-                </p>
-                <button
-                  onClick={() => setPlayingVideo(false)}
-                  className="px-6 py-2.5 bg-neutral-800 hover:bg-neutral-700 text-white text-xs font-bold uppercase tracking-wider rounded"
-                >
-                  Return to Preview
-                </button>
-              </div>
-            ) : (
-              <div
-                onClick={() => setPlayingVideo(true)}
-                className="group relative w-full h-full cursor-pointer flex items-center justify-center select-none"
-              >
-                <Image
-                  src="/airsat-orbit.jpg"
-                  alt="Where do we fly? Video preview"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  className="object-cover object-center opacity-60 group-hover:opacity-75 transition-opacity"
-                />
-                <div className="absolute inset-0 bg-black/40" />
+          <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 bg-black">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${VLEO_YOUTUBE_ID}?autoplay=1&mute=1&loop=1&playlist=${VLEO_YOUTUBE_ID}&controls=1&rel=0&modestbranding=1&playsinline=1`}
+              title="Stars Edges: Where do we fly? - Orbital Flight Simulation"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full border-0"
+            />
+          </div>
 
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-10">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xs font-bold bg-white/20 backdrop-blur px-2 py-0.5 rounded">STARS EDGES</span>
-                    <span className="text-xs sm:text-sm font-semibold truncate drop-shadow">
-                      Stars Edges: Where do we fly?
-                    </span>
-                  </div>
-                </div>
-
-                <div className="relative z-10 w-16 h-12 sm:w-20 sm:h-14 bg-red-600 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-red-500 transition-all shadow-xl">
-                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-white fill-current translate-x-0.5" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-
-                <div className="absolute bottom-4 left-4 z-10 text-white/90 text-xs sm:text-sm font-medium flex items-center space-x-1.5 drop-shadow">
-                  <span>Watch on</span>
-                  <span className="font-bold flex items-center">
-                    YouTube
-                  </span>
-                </div>
-              </div>
-            )}
+          <div className="mt-8 text-center max-w-2xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[#2563EB] text-xs font-semibold uppercase tracking-wider mb-3">
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+              Orbital Trajectory Simulation • 100 km – 150 km VLEO
+            </div>
+            <p className="text-neutral-400 text-sm sm:text-base leading-relaxed">
+              AirSAT completes one full Earth orbit every 87 minutes, experiencing ambient atmospheric particle intake for continuous drag-neutral flight.
+            </p>
           </div>
         </section>
 

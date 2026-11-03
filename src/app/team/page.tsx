@@ -112,11 +112,11 @@ export default function TeamPage() {
 
   const coordinators = [
     {
-      name: "Legal Ackivas",
+      name: "Raj Kumar",
       role: "Legal Coordinator",
     },
     {
-      name: "V.S.N. Roa",
+      name: "V.Vamsi Krishna",
       role: "Regional Coordinator",
     },
   ];
