@@ -13,8 +13,20 @@ const heroSlides = [
     alt: "AirSAT satellite orbiting above Earth in VLEO",
   },
   {
+    src: "/hero-satellite-vleo.jpg",
+    alt: "AirSAT modular satellite with solar panels and ion thruster over Earth horizon",
+  },
+  {
     src: "/airsat-tech-hero.jpg",
     alt: "STARS EDGES satellite constellation architecture",
+  },
+  {
+    src: "/hero-constellation-earth.jpg",
+    alt: "VLEO satellite constellation in formation above city lights",
+  },
+  {
+    src: "/airsat-model.jpg",
+    alt: "AirSAT structural satellite model",
   },
   {
     src: "/cleanroom-satellite.jpg",
@@ -25,8 +37,16 @@ const heroSlides = [
     alt: "AERIS air-breathing electric propulsion thruster module",
   },
   {
-    src: "/airsat-model.jpg",
-    alt: "AirSAT structural satellite model",
+    src: "/laptop-station.jpg",
+    alt: "Direct-to-device tasking and sovereign satellite ground control station",
+  },
+  {
+    src: "/aeris-haps.jpg",
+    alt: "AERIS HAPS electric propulsion thruster pod",
+  },
+  {
+    src: "/team-contact.jpg",
+    alt: "Spacecraft telemetry and mission operations control",
   },
 ];
 

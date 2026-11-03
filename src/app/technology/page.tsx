@@ -91,9 +91,38 @@ export default function TechnologyPage() {
             Where do we fly?
           </h2>
 
+          {/* Video Selector Switcher */}
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
+            {VLEO_VIDEOS.map((vid) => {
+              const isActive = vid.id === activeVideoId;
+              return (
+                <button
+                  key={vid.id}
+                  onClick={() => setActiveVideoId(vid.id)}
+                  className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2 ${
+                    isActive
+                      ? "bg-blue-600 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)]"
+                      : "bg-neutral-900 hover:bg-neutral-800 text-neutral-400 hover:text-white border border-neutral-800"
+                  }`}
+                >
+                  <span
+                    className={`w-2 h-2 rounded-full ${
+                      isActive ? "bg-white animate-pulse" : "bg-neutral-600"
+                    }`}
+                  />
+                  <span>{vid.label}</span>
+                  <span className="text-[10px] opacity-75 uppercase px-1.5 py-0.5 rounded bg-black/40">
+                    {vid.badge}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
           <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 bg-black">
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/${VLEO_YOUTUBE_ID}?autoplay=1&mute=1&loop=1&playlist=${VLEO_YOUTUBE_ID}&controls=1&rel=0&modestbranding=1&playsinline=1`}
+              key={activeVideoId}
+              src={`https://www.youtube-nocookie.com/embed/${activeVideoId}?autoplay=1&mute=1&loop=1&playlist=${activeVideoId}&controls=1&rel=0&modestbranding=1&playsinline=1`}
               title="Stars Edges: Where do we fly? - Orbital Flight Simulation"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
